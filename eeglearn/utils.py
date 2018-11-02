@@ -1,10 +1,12 @@
-__author__ = 'Pouya Bashivan'
+from __future__ import print_function
 
 import math as m
 import numpy as np
 np.random.seed(123)
 import scipy.io
 from sklearn.decomposition import PCA
+
+__author__ = 'Pouya Bashivan'
 
 def cart2sph(x, y, z):
     """
@@ -124,5 +126,5 @@ def reformatInput(data, labels, indices):
 
 if __name__ == '__main__':
     data = np.random.normal(size=(100, 10))
-    print 'Original: {0}'.format(data)
-    print 'Augmented: {0}'.format(augment_EEG(data, 0.1, pca=True))
+    print('Original: {0}'.format(data))
+    print('Augmented: {0}'.format(augment_EEG(data, 0.1, pca=True)))
